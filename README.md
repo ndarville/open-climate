@@ -48,4 +48,3 @@ They might be resized differently, but only as exceptions.
 [Extreme Weather and Climate Change]: https://ndarville.com/reading/extreme-weather-and-climate-change/
 [extreme-weather-and-climate-change]: https://github.com/ndarville/open-climate/tree/master/reading/extreme-weather-and-climate-change
 [reading blog]: https://ndarville.com/reading
-[extreme-weather-and-climate-change]:
