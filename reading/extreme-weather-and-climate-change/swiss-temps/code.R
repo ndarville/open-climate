@@ -1,7 +1,6 @@
 # getRversion() => 3.4.1
 # packageVersion("ggplot2") => 2.2.1
 library(ggplot2)
-library(ggthemes)
 
 bas <- read.table(url("http://www.meteoswiss.admin.ch/product/output/climate-data/homogenous-monthly-data-processing/data/homog_mo_BAS.txt"), skip=27, header=TRUE)
 gve <- read.table(url("http://www.meteoswiss.admin.ch/product/output/climate-data/homogenous-monthly-data-processing/data/homog_mo_GVE.txt"), skip=27, header=TRUE)
@@ -28,6 +27,7 @@ ggplot(yearly.temps.subset, aes(x=Temperature)) +
   scale_x_continuous(breaks = seq(12,28, by=2),
                      limits = c(12,28)) +
   scale_y_continuous(breaks = FALSE,
+                     expand=c(0,0),
                      limits = c(0,1)) + # TODO: Remove confusing space beneath minimum
   labs(x="Temperature", y="Frequency", caption="ndarville.com/reading/") +
   ggtitle("1988-2017") +
@@ -42,5 +42,5 @@ ggplot(yearly.temps.subset, aes(x=Temperature)) +
         y=0.5),
     colour="#444444",
     angle=90) +
-  geom_vline(xintercept=yearly.temps.subset$Temperature, color="#2C7BB6") + theme_fivethirtyeight()
+  geom_vline(xintercept=yearly.temps.subset$Temperature, color="#2C7BB6")
 
